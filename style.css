@@ -1,0 +1,195 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-image: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradient background */
+}
+
+/* Header and Subheader styles */
+h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+/* Container for the form */
+.container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 550px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 5px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+}
+
+/* Input, select, and button styles */
+input, select, button {
+    padding: 14px;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"], select {
+    font-size: 1rem;
+}
+
+/* Input & select focus effect */
+input:focus, select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(72, 218, 128, 0.7);
+}
+
+/* Button styles */
+button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Styling for the cancel button */
+button.cancel {
+    background-color: #f44336;
+    color: white;
+    font-size: 1rem;
+    padding: 8px 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button.cancel:hover {
+    background-color: #e53935;
+}
+
+/* Booking list styles */
+ul#bookingList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul#bookingList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #f9f9f9;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+ul#bookingList li:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-2px);
+}
+
+ul#bookingList li .cancel {
+    margin-left: 10px;
+}
+
+/* Add a banner image */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    button, input, select {
+        font-size: 1rem;
+    }
+}
+
+/* Loading/Processing indicator (optional feature) */
+.loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading img {
+    width: 100px;
+    height: 100px;
+}

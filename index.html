@@ -1,0 +1,45 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Washing Machine Booking</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS link -->
+</head>
+<body>
+    <!-- Banner Image for NSS College -->
+    <div>
+        <img src="https://static.zollege.in/public/college_data/images/campusimage/1406715525mens_hostel_2.jpg" alt="NSS College of Engineering Banner">
+    </div>
+    
+    <div class="container">
+        <h2>Washing Machine Booking</h2>
+
+        <!-- Logo or Image of NSS College -->
+        <img src="https://static.zollege.in/public/college_data/images/logos/1589289061Logo.jpg?tr=h-94,w-94,c-force" alt="NSS College Logo" width="100">
+
+        <label for="date">Select Date:</label>
+        <input type="date" id="date">
+
+        <label for="time">Select Time Slot:</label>
+        <select id="time">
+            <option value="8-9AM">8:00 - 9:00 AM</option>
+            <option value="9-10AM">9:00 - 10:00 AM</option>
+            <option value="10-11AM">10:00 - 11:00 AM</option>
+        </select>
+
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <button onclick="bookSlot()">Book Slot</button>
+
+        <h3>Current Bookings</h3>
+        <ul id="bookingList"></ul>
+
+        <h3>Bill Summary</h3>
+        <div id="billSection"></div>
+    </div>
+
+    <script src="script.js"></script> <!-- External JS link -->
+</body>
+</html>
